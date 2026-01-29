@@ -6,8 +6,8 @@ export const projects = [
     gradient: "from-blue-500 to-cyan-400",
     image: "/Portfolio.webp",
     logo: "/Portfolio.webp",
-    link: "https://github.com/JonierRD",
-    github: "https://github.com/JonierRD"
+    link: "https://portfolio-jonierrd.vercel.app",
+    github: "https://github.com/JonierRD/Portfolio.git"
   },
   {
     title: "NexStay (En Proceso)",
