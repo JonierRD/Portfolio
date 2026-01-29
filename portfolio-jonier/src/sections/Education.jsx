@@ -26,7 +26,7 @@ export default function Education() {
       alt: "Universidad Tecnológica del Putumayo",
       title: "Ingeniería en Sistemas",
       institution: "Universidad Tecnológica del Putumayo",
-      period: "2025 - Presente",
+      period: "2024 - Presente",
       description: "Cursando Ingeniería en Sistemas, enfocándome en desarrollo web, bases de datos y programación."
     }
   ];
