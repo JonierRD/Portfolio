@@ -1,0 +1,346 @@
+/* Optimizaciones para móvil - efectos simplificados */
+@media (max-width: 768px) {
+  .contact-form-card {
+    box-shadow: 4px 4px 0 #000;
+    transform: none;
+    transform-style: flat;
+  }
+
+  .contact-form-card:hover {
+    transform: none;
+    box-shadow: 6px 6px 0 #000;
+  }
+
+  .social-card-brutalist {
+    box-shadow: 4px 4px 0 #000;
+    transform: none;
+  }
+
+  .social-card-brutalist:hover {
+    transform: none;
+    box-shadow: 6px 6px 0 #000;
+  }
+
+  .social-card-brutalist::after {
+    display: none;
+  }
+
+  .social-link-brutalist {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .social-link-brutalist:hover {
+    transform: none;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .social-icon-box {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .social-link-brutalist:hover .social-icon-box {
+    transform: none;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .info-card-brutalist {
+    box-shadow: 4px 4px 0 #000;
+    transform: none;
+  }
+
+  .info-card-brutalist:hover {
+    transform: none;
+    box-shadow: 6px 6px 0 #000;
+  }
+}
+
+.contact-container {
+  position: relative;
+  perspective: 1000px;
+}
+
+.contact-form-card {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  border: 4px solid #000;
+  box-shadow:
+    8px 8px 0 #000,
+    16px 16px 0 rgba(139, 92, 246, 0.3);
+  transition: height 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.contact-form-card:hover {
+  height: 660px;
+  transform: translateZ(20px) rotateX(2deg) rotateY(-2deg);
+  box-shadow:
+    12px 12px 0 #000,
+    24px 24px 0 rgba(139, 92, 246, 0.4),
+    0 0 50px rgba(139, 92, 246, 0.6);
+}
+
+.contact-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: inherit;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 10;
+}
+
+.contact-title-text {
+  color: #fff;
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form-card:hover .contact-title-text {
+  opacity: 0;
+  transform: translateY(-30px) scale(0.8);
+}
+
+.contact-form-wrapper {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 90px);
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 20px 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(30px) scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  overflow-y: hidden;
+}
+
+.contact-form-card:hover .contact-form-wrapper {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.contact-input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.contact-label {
+  display: block;
+  color: #000;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid #000;
+  font-weight: 600;
+  color: #000;
+  box-shadow: 4px 4px 0 #000;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+  background: rgba(255, 255, 255, 1);
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: #000;
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  border: 4px solid #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 6px 6px 0 #000;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.contact-submit-btn:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0 #000;
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.contact-submit-btn:active {
+  transform: translate(6px, 6px);
+  box-shadow: 0 0 0 #000;
+}
+
+.contact-form-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact-form-card:hover::before {
+  left: 100%;
+}
+
+.contact-form-card::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  transition: all 0.6s ease;
+}
+
+.contact-form-card:hover::after {
+  transform: scale(1.2) rotate(90deg);
+  background: #a78bfa;
+}
+
+.social-card-brutalist {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  border: 4px solid #000;
+  box-shadow:
+    8px 8px 0 #000,
+    16px 16px 0 rgba(139, 92, 246, 0.3);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  overflow: visible;
+}
+
+.social-card-brutalist:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    12px 12px 0 #000,
+    20px 20px 0 rgba(139, 92, 246, 0.4);
+}
+
+.social-card-brutalist::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  clip-path: polygon(100% 0, 0 0, 0 100%);
+  transition: all 0.4s ease;
+}
+
+.social-card-brutalist:hover::after {
+  background: #fbbf24;
+  transform: scale(1.1);
+}
+
+.social-link-brutalist {
+  background: rgba(255, 255, 255, 0.15);
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  backdrop-filter: blur(10px);
+}
+
+.social-link-brutalist:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #000;
+}
+
+.social-icon-box {
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.social-link-brutalist:hover .social-icon-box {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.info-card-brutalist {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+  border: 4px solid #000;
+  box-shadow:
+    8px 8px 0 #000,
+    16px 16px 0 rgba(139, 92, 246, 0.3);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+}
+
+.info-card-brutalist::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+  width: 24px;
+  height: 24px;
+  background: #000;
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+}
+
+.info-card-brutalist:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    12px 12px 0 #000,
+    20px 20px 0 rgba(139, 92, 246, 0.4);
+}
