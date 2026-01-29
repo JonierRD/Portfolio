@@ -55,7 +55,7 @@ export default function About() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">Jonier Rendon</h3>
-                    <p className="text-cyan-400">Full Stack Developer</p>
+                    <p className="text-cyan-400">Desarrollador Junior</p>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed">

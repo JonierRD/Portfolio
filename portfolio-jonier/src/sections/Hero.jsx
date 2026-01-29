@@ -57,7 +57,7 @@ export default function Hero() {
             className="text-base sm:text-lg md:text-xl text-gray-400 mb-6 md:mb-8 max-w-lg mx-auto md:mx-0"
           >
             Estudiante de Ingeniería en Sistemas  -
-            <br /> Formándome como Full Stack Developer. 
+            <br /> Formándome como Desarrollador Junior. 
             <br />
             Tengo conocimientos en front-end y back-end, manejo de bases de datos y desarrollo de proyectos web, siempre buscando ampliar mis habilidades y crear soluciones funcionales.
           </motion.p>
@@ -107,7 +107,7 @@ export default function Hero() {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/80 to-transparent p-4">
                 <h3 className="text-white font-bold text-xl mb-1">Jonier Rendon</h3>
-                <p className="text-cyan-400 text-sm mb-2">Full Stack Developer</p>
+                <p className="text-cyan-400 text-sm mb-2">Desarrollador Junior</p>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   <span className="text-green-500 text-xs">Disponible</span>
@@ -120,7 +120,7 @@ export default function Hero() {
           <div className="hidden md:block">
             <ProfileCard
               name="Jonier Rendon"
-              title="Full Stack Developer"
+              title="Desarrollador Junior"
               handle="Jonier117"
               status="Disponible"
               contactText="Contacto"
